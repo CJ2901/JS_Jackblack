@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+    <header class="titulo">
+        Blackjack
+    </header>
+
+    <div class="row mt-2">
+        <div id="divBotones" class="col text-center">
+
+            <button id="btnNuevo" class="btn btn-danger">Nuevo Juego</button>
+            <button id="btnPedir" disabled="disabled" class="btn btn-primary">Pedir Carta</button>
+            <button id="btnDetener" disabled="disabled" class="btn btn-primary">Detener</button>
+
+        </div>
+    </div>
+
+    <div class="row container">
+        <div class = "col">
+
+            <h1>Jugador 1 - <small> 0</small></h1>
+            <div id="jugador-cartas" class="divCartas">
+            </div>
+        </div>
+    </div>
+
+    <div class="row container mt-2">
+        <div class = "col">
+
+            <h1>Computadora 1 - <small> 0</small></h1>
+            <div id="computadora-cartas" class="divCartas">
+            </div>
+        </div>
+    </div>    
+
+    <script src="assets/js/underscore-min.js"></script>
+    <script src="assets/js/juego.js"></script>
+
+    <script>
+        // Se inicializa el juego
+        console.log( moduloJuego );
+
+        document.querySelector('#btnNuevo').addEventListener('click', () => {
+            moduloJuego.comenzarJuego();
+        })
+
+    </script>
+
+</body>
+</html>
